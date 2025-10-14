@@ -1,0 +1,11 @@
+---
+// src/pages/merchantDashboard.astro
+import Layout from "../layouts/Layout.astro"
+import Dashboard from "../components/Dashboard.jsx"
+---
+
+<Layout>
+    <div class="w-full h-screen">
+        <Dashboard client:load portalItemId="61cf19d8d39e483ab3ce6fb4d72cb61c" />
+    </div>
+</Layout>
