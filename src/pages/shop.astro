@@ -5,7 +5,17 @@ import logo from "../images/logo.svg";
 import logo_bee from "../images/logo_bee.svg";
 import search_icon from "../images/search_icon.svg";
 import Search from "../components/Search.astro";
+import RedlandsMap from "../components/RedlandsMap";
 import "../styles/global.css";
+
+const items: string[] = [
+    "Blaylock Brittle Co",
+    "Cedar Ave Blooms",
+    "Citrus Blossom Bakery LLC",
+    "Cleopatra Pastarrie",
+    "Dan’s Doughs",
+    "Freeze Dried Fairy",
+];
 ---
 
 <Layout>
@@ -36,26 +46,31 @@ import "../styles/global.css";
             >
                 Beverages
             </div>
-            <div class="w-32 h-12 left-0 top-[1px] absolute rounded-[5px] border border-neutral-300"></div>
-            <div
-                class="w-24 h-14 left-[9px] top-[1px] absolute justify-start text-black text-3xl font-normal font-['Nexa'] leading-[54px]"
-            >
-                Bakery
-            </div>
+            <a data-astro-prefetch href="/map">
+                <div
+                    class="w-32 h-12 left-0 top-[1px] absolute rounded-[5px] border border-neutral-300 hover:bg-neutral-200"
+                >
+                    <div
+                        class="w-24 h-14 left-[9px] top-[1px] absolute justify-start text-black text-3xl font-normal font-['Nexa'] leading-[54px]"
+                    >
+                        Bakery
+                    </div>
+                </div>
+            </a>
             <div
                 class="w-24 h-12 left-[316px] top-0 absolute justify-start text-black text-3xl font-normal font-['Nexa'] leading-[54px]"
             >
                 Floral
             </div>
         </div>
-        <div class="w-[572px] h-96 left-[141px] top-[544px] absolute  overflow-scroll scrollbar-hidden">
+        <div class="w-[572px] h-[432px] left-[141px] top-[544px] absolute overflow-scroll scrollbar-hidden">
             <div class="w-[515px] h-10 left-0 top-[278px] absolute justify-start">
                 <span class="text-black text-base font-black font-['Nexa']">$$</span><span
                     class="text-neutral-300 text-base font-black font-['Nexa']">$$$</span
                 ><span class="text-black text-base font-black font-['Nexa']"> | Redlands, CA 92373</span>
             </div>
             <div
-                class="w-[455px] h-10 left-0 top-[167px] absolute justify-start text-amber-500 text-4xl font-black font-['Nexa']"
+                class="w-[455px] h-10 left-0 top-[167px] absolute justify-start text-buzz text-4xl font-black font-['Nexa']"
             >
                 Cedar Ave Blooms
             </div>
@@ -69,9 +84,7 @@ import "../styles/global.css";
                     class="text-neutral-300 text-base font-black font-['Nexa']">$$$</span
                 ><span class="text-black text-base font-black font-['Nexa']"> | Redlands, CA 92373</span>
             </div>
-            <div
-                class="w-[474px] h-10 left-0 top-0 absolute justify-start text-amber-500 text-4xl font-black font-['Nexa']"
-            >
+            <div class="w-[474px] h-10 left-0 top-0 absolute justify-start text-buzz text-4xl font-black font-['Nexa']">
                 Blaylock Brittle Co
             </div>
             <div
@@ -89,7 +102,7 @@ import "../styles/global.css";
                 >
             </div>
             <div
-                class="w-[515px] h-10 left-0 top-[333px] absolute justify-start text-amber-500 text-4xl font-black font-['Nexa']"
+                class="w-[515px] h-10 left-0 top-[333px] absolute justify-start text-buzz text-4xl font-black font-['Nexa']"
             >
                 Citrus Blossom Bakery LLC
             </div>
@@ -99,23 +112,23 @@ import "../styles/global.css";
                 Offering buttercream wedding cakes and curated dessert tables.
             </div>
             <div
-                class="w-[770.50px] h-0 left-0 top-[165px] absolute outline outline-1 outline-offset-[-0.50px] outline-neutral-300"
+                class="w-[770.50px] h-0 left-0 top-[165px] absolute outline-1 outline-offset-[-0.50px] outline-neutral-300"
             >
             </div>
             <div
-                class="w-[770.50px] h-0 left-0 top-[326px] absolute outline outline-1 outline-offset-[-0.50px] outline-neutral-300"
+                class="w-[770.50px] h-0 left-0 top-[326px] absolute outline-1 outline-offset-[-0.50px] outline-neutral-300"
             >
             </div>
             <div
-                class="w-[770.50px] h-0 left-0 top-[479px] absolute outline outline-1 outline-offset-[-0.50px] outline-neutral-300"
+                class="w-[770.50px] h-0 left-0 top-[479px] absolute outline-1 outline-offset-[-0.50px] outline-neutral-300"
             >
             </div>
             <div
-                class="w-[770.50px] h-0 left-0 top-[641px] absolute outline outline-1 outline-offset-[-0.50px] outline-neutral-300"
+                class="w-[770.50px] h-0 left-0 top-[641px] absolute outline-1 outline-offset-[-0.50px] outline-neutral-300"
             >
             </div>
             <div
-                class="w-[770.50px] h-0 left-0 top-[783px] absolute outline outline-1 outline-offset-[-0.50px] outline-neutral-300"
+                class="w-[770.50px] h-0 left-0 top-[783px] absolute outline-1 outline-offset-[-0.50px] outline-neutral-300"
             >
             </div>
             <div class="w-[515px] h-10 left-0 top-[606px] absolute justify-start">
@@ -124,7 +137,7 @@ import "../styles/global.css";
                 ><span class="text-black text-base font-black font-['Nexa']"> | Redlands, CA 92373</span>
             </div>
             <div
-                class="w-[455px] h-10 left-0 top-[492px] absolute justify-start text-amber-500 text-4xl font-black font-['Nexa']"
+                class="w-[455px] h-10 left-0 top-[492px] absolute justify-start text-buzz text-4xl font-black font-['Nexa']"
             >
                 Cleopatra Pastarrie
             </div>
@@ -139,7 +152,7 @@ import "../styles/global.css";
                 ><span class="text-black text-base font-extrabold font-['Nexa']"> | Redlands, CA 92373</span>
             </div>
             <div
-                class="w-[455px] h-10 left-0 top-[654px] absolute justify-start text-amber-500 text-4xl font-black font-['Nexa']"
+                class="w-[455px] h-10 left-0 top-[654px] absolute justify-start text-buzz text-4xl font-black font-['Nexa']"
             >
                 Dan’s Doughs
             </div>
@@ -152,7 +165,7 @@ import "../styles/global.css";
                 ><span class="text-black text-base font-black font-['Nexa']"> | Redlands, CA 92373</span>
             </div>
             <div
-                class="w-[559px] h-10 left-0 top-[797px] absolute justify-start text-amber-500 text-4xl font-black font-['Nexa']"
+                class="w-[559px] h-10 left-0 top-[797px] absolute justify-start text-buzz text-4xl font-black font-['Nexa']"
             >
                 Freeze Dried Fairy
             </div>
@@ -163,16 +176,23 @@ import "../styles/global.css";
             </div>
         </div>
 
-        <div class="w-[859px] h-[663px] left-[904px] top-[312px] absolute bg-black rounded-[10px]"></div>
+        <div class="w-[859px] h-[663px] left-[904px] top-[312px] absolute rounded-[10px]">
+            <a data-astro-prefetch href="/map"
+                ><RedlandsMap
+                    client:load
+                    featureLayerUrl={"https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/FinalBusinessFeature/FeatureServer"}
+                /></a
+            >
+        </div>
         <div
             class="w-24 h-9 left-[1067px] top-[114px] absolute justify-start text-black text-3xl font-light font-['Nexa']"
         >
-      <a href="/shop">Shop</a>
+      <a aria-current="page" href="/shop">Shop</a>
         </div>
         <div
-            class="w-12 h-9 left-[1275px] top-[114px] absolute justify-start text-black text-3xl font-light font-['Nexa']"
+            class="w-12 h-9 left-[1240px] top-[114px] absolute justify-start text-black text-3xl font-light font-['Nexa']"
         >
-            Sell
+      <a data-astro-prefetch href="/business">Business </a>
         </div>
         <div
             class="w-24 h-9 left-[1438px] top-[114px] absolute justify-start text-black text-3xl font-light font-['Nexa']"
@@ -190,7 +210,7 @@ import "../styles/global.css";
         <div
             class="w-[470.04px] h-9 left-[142.10px] top-[340px] absolute justify-start text-black text-3xl font-light font-['Nexa']"
         >
-            <Search items={["McDonald's", "Jack in the Box", "In n Out"]} />
+            <Search items={items} />
         </div>
         <Image
             alt="Magnifying glass"

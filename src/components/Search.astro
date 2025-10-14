@@ -8,12 +8,13 @@ const { items } = Astro.props;
 <div class="w-[600px] h-9 left-[166px] top-[340px] justify-start text-black text-3xl font-light font-['Nexa']">
     <label for="search-box" class="sr-only">Search:</label>
     <input type="search" id="search-box" placeholder="Search by vendor or location" class="w-full focus:outline-none" />
-
-    <div
-        id="results-container"
-        class="absolute top-full left-0 w-[695px] z-10 bg-white border border-gray-300 mt-12 text-black rounded-b-lg shadow-lg max-h-52 overflow-y-auto"
-    >
-    </div>
+    <a data-astro-prefetch href="/shop">
+        <div
+            id="results-container"
+            class="absolute top-full left-0 w-[695px] z-10 bg-white border border-gray-300 mt-12 text-black rounded-b-lg shadow-lg max-h-52 overflow-y-auto"
+        >
+        </div>
+    </a>
 </div>
 
 <script is:inline define:vars={{ items }}>

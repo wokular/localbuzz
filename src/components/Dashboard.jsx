@@ -47,11 +47,12 @@ export default function Dashboard({ portalItemId }) {
                 {/* — Full‑height Sidebar */}
                 <aside className="w-72 h-full bg-neutral-100 rounded-[20px] p-6 flex flex-col">
                     {/* Logo */}
-                    <img
-                        src="/logo.png"
-                        alt="Logo"
-                        className="w-24 h-28 mb-6"
-                    />
+                    <a href="/">
+                        <img
+                            src="/logo_bee.svg"
+                            alt="Logo"
+                            className="w-24 h-28 mb-6 transition delay-150 duration-300 ease-in-out hover:-translate-y-1" />
+                    </a>
 
                     {/* Primary Nav */}
                     <h2 className="text-lg font-['Nexa'] font-black mb-3">Menu</h2>
@@ -80,7 +81,7 @@ export default function Dashboard({ portalItemId }) {
                             <p className="text-white text-base font-['Nexa'] font-black leading-7">
                                 Download <span className="font-normal">our Mobile App</span>
                             </p>
-                            <button className="mt-4 w-full text-sm bg-amber-500 rounded-[5px] py-2 text-white font-['Nexa'] font-black" style="cursor: pointer;">
+                            <button className="mt-4 w-full text-sm bg-buzz rounded-[5px] py-2 text-white font-['Nexa'] font-black" style="cursor: pointer;">
                                 Download
                             </button>
                         </div>

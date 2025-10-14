@@ -32,7 +32,7 @@ function DropdownFilter({ state, setState }) {
                     {LABELS.map((opt, idx) => (
                         <button
                             key={idx}
-                            className={`w-full h-11 flex items-center px-4 text-sm font-black font-['Nexa'] ${state === idx ? 'bg-amber-500 text-white' : 'text-black font-normal'
+                            className={`w-full h-11 flex items-center px-4 text-sm font-black font-['Nexa'] ${state === idx ? 'bg-buzz text-white' : 'text-black font-normal'
                                 }`}
                             onClick={() => onSelect(idx)}
                             style="cursor: pointer;"

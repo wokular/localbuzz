@@ -102,21 +102,21 @@ export default function DashGrid({ mapContainerRef, selectedPoint, onMapClick, p
                         K8 Burbs and Beyond &gt;
                     </a>
                     <div className="w-full h-6 rounded-[5px] border-[1.5px] border-neutral-300 mb-4">
-                        <div className="bg-amber-500 h-full w-[57.1%] rounded-[5px]" />
+                        <div className="bg-buzz h-full w-[57.1%] rounded-[5px]" />
                     </div>
 
                     <a href="#" className="text-base font-['Nexa'] font-light ">
                         H3 Neighborhood Spirit
                     </a>
                     <div className="w-full h-6 rounded-[5px] border-[1.5px] border-neutral-300 mb-4">
-                        <div className="bg-amber-500 h-full w-[36%] rounded-[5px]" />
+                        <div className="bg-buzz h-full w-[36%] rounded-[5px]" />
                     </div>
 
                     <a href="#" className="text-base font-['Nexa'] font-light ">
                         Other
                     </a>
                     <div className="w-full h-6 rounded-[5px] border-[1.5px] border-neutral-300 mb-4">
-                        <div className="bg-amber-500 h-full w-[18%] rounded-[5px]" />
+                        <div className="bg-buzz h-full w-[18%] rounded-[5px]" />
                     </div>
 
                     <p className="h-20 text-sm justify-start text-black text-base font-light font-['Nexa'] leading-none">

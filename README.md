@@ -1,43 +1,18 @@
-# Astro Starter Kit: Minimal
+# LocalBuzz
 
-```sh
-bun create astro@latest -- --template minimal
-```
+> Local Buzz connects you with local makers, chefs, and small businesses. Shop unique goods, explore your community, and support your neighborhood artisans with smart, map-powered insights.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+View our submission to the Esri 2025 Intern Hackathon on [Devpost](https://devpost.com/software/local-buzz)!
 
-## 🚀 Project Structure
+## What inspired us? 
+Inspiration came from some friends who ran a cottage-licensed businesses from their home. They crafted beautiful homemade creations but struggled to grow their audience despite their marketing efforts. Their journey is just one of the many stories of those trying to launch home-based businesses; without a storefront and profit for marketing, there is limited reach and a lack of insight to customer demographics. This struggle inspired us to build a tool that could help bridge the gap between local talent and community members who want to shop locally and sustainably. This app hits on themes of small business growth, local entrepreneurship, sustinable shopping, and the chance to encourage community engagement. 
 
-Inside of your Astro project, you'll see the following folders and files:
+## What did we learn? 
+The entire development cycle of this project was a tremendous learning curve for all of us. Beyond testing our technical skills, it challenged our ability to collaborate, adapt, and grow as a team. We learned the value of truly listening to one another, encouraging open dialogue, and creating an environment where every idea was considered. It also taught us how to effectively delegate tasks, leverage each other’s strengths, and step out of our comfort zones to contribute to areas where we had less expertise.
+Through this experience, we developed a better understanding of time management, conflict resolution, and collective problem-solving. We realized that success comes not just from individual effort but from fostering trust, maintaining clear communication, and working toward a shared vision as a unified team.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## How did we build it? 
+We built this application using Astro as the core framework with Preact integration for interactive components. This technical approach combined static site generation (Astro) for performance with Astro server islands for dynamic, interactive components (Preact). We used Tailwind CSS for styling, implementing designs directly from Figma mockups with pixel-perfect accuracy using utility classes. The map functionality was powered by ArcGIS JavaScript API 4.33, enabling advanced features like service area analysis and interactive business data display. The architecture separated static content (Astro components) from dynamic features (Preact components), allowing for optimal performance while maintaining rich interactivity. The design system was carefully translated from Figma to code, ensuring the final application matched the intended visual specifications while providing a modern, responsive user experience.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## What Challenges Did We Face?
+Many home-based businesses don’t have public locations listed, which made it difficult to build a comprehensive database. We had to rely on local outreach and searching for local markets and makers to build our directory.  Additionally, building a platform that works for both sellers and buyers was a challenge, as we had to ensure the experience on both ends was intuitive and comprehensive.

@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import Layout from "../layouts/Layout.astro"
 import { Image } from "astro:assets"
 import logo from "../images/logo.svg"
@@ -6,6 +7,25 @@ import logo_bee from "../images/logo_bee.svg"
 import search_icon from "../images/search_icon.svg"
 import Search from "../components/Search.astro"
 import "../styles/global.css"
+=======
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import logo from "../images/logo.svg";
+import logo_bee from "../images/logo_bee.svg";
+import search_icon from "../images/search_icon.svg";
+import composite from "../images/composite.png";
+import Search from "../components/Search.astro";
+import "../styles/global.css";
+
+const items: string[] = [
+    "Blaylock Brittle Co",
+    "Cedar Ave Blooms",
+    "Citrus Blossom Bakery LLC",
+    "Cleopatra Pastarrie",
+    "Dan’s Doughs",
+    "Freeze Dried Fairy",
+];
+>>>>>>> main
 ---
 
 <Layout>
@@ -24,16 +44,22 @@ import "../styles/global.css"
         >
             See what the buzz is about!
         </div>
-        <div class="w-[859px] h-[663px] left-[904px] top-[312px] absolute bg-black rounded-[10px]"></div>
+        <div class="w-[859px] h-[663px] left-[904px] top-[312px] absolute">
+            <Image src={composite} alt="Honeycomb art" class="rounded-[10px]" />
+        </div>
         <div
             class="w-24 h-9 left-[1067px] top-[114px] absolute justify-start text-black text-3xl font-light font-['Nexa']"
         >
+<<<<<<< HEAD
             <a href="/shop">Shop</a>
+=======
+            <a data-astro-prefetch href="/shop">Shop</a>
+>>>>>>> main
         </div>
         <div
-            class="w-12 h-9 left-[1275px] top-[114px] absolute justify-start text-black text-3xl font-light font-['Nexa']"
+            class="w-12 h-9 left-[1240px] top-[114px] absolute justify-start text-black text-3xl font-light font-['Nexa']"
         >
-            Sell
+            <a data-astro-prefetch href="/business">Business</a>
         </div>
         <div
             class="w-24 h-9 left-[1438px] top-[114px] absolute justify-start text-black text-3xl font-light font-['Nexa']"
@@ -49,24 +75,25 @@ import "../styles/global.css"
         <div
             class="w-80 h-9 left-[1236px] top-[605px] absolute justify-start text-white text-3xl font-light font-['Nexa']"
         >
-            Photoshop Composite
         </div>
 
         <div id="login_button" class="transition delay-150 duration-300 ease-in-out hover:-translate-y-1">
-            <div class="w-40 h-16 left-[125px] top-[792px] absolute bg-buzz rounded-[5px]"></div>
-            <div
-                class="w-36 h-14 pt-2 left-[150px] top-[798px] absolute justify-start text-white text-3xl font-black font-['Nexa']"
-            >
-                LOG IN
-            </div>
+            <a data-astro-prefetch href="/shop"
+                ><div class="w-36 h-16 left-[125px] top-[792px] absolute bg-buzz rounded-[5px]"></div>
+                <div
+                    class="w-36 h-14 pt-2 left-[150px] top-[798px] absolute justify-start text-white text-3xl font-black font-['Nexa']"
+                >
+                    Log In
+                </div>
+            </a>
         </div>
 
         <div id="signup_bottom" class="transition delay-150 duration-300 ease-in-out hover:-translate-y-1">
-            <div class="w-[338px] h-16 left-[310px] top-[792px] absolute bg-buzz rounded-[5px]"></div>
+            <div class="w-[285px] h-16 left-[310px] top-[792px] absolute bg-buzz rounded-[5px]"></div>
             <div
                 class="w-100 h-14 place-content-center left-[335px] top-[798px] absolute justify-start text-white text-3xl font-black font-['Nexa']"
             >
-                CREATE ACCOUNT
+                Create Account
             </div>
         </div>
 
@@ -79,15 +106,17 @@ import "../styles/global.css"
         <div
             class="w-[470.04px] h-9 left-[142.10px] top-[340px] absolute justify-start text-black text-3xl font-light font-['Nexa']"
         >
-            <Search items={["McDonald's", "Jack in the Box", "In n Out"]} />
+            <Search items={items} />
         </div>
         <Image
             alt="Magnifying glass"
             src={search_icon}
             class="w-18 h-18 left-[755px] top-[322px] absolute rounded-[10px] scale-50"
         />
-        <a href="/"><Image alt="LocalBuzz logo" class="w-96 h-32 left-[201px] top-[82px] absolute" src={logo} /></a>
-        <a href="/"
+        <a aria-current="page" href="/"
+            ><Image alt="LocalBuzz logo" class="w-96 h-32 left-[201px] top-[82px] absolute" src={logo} /></a
+        >
+        <a aria-current="page" href="/"
             ><Image
                 alt="LocalBuzz Bee"
                 class="w-28 h-32 left-[96px] top-[79px] absolute transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"

@@ -1,0 +1,10 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MapRoute from "../components/MapRoute";
+
+const furl = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/FinalBusinessFeature/FeatureServer";
+---
+
+<Layout>
+  <MapRoute client:load featureLayerUrl={furl} />
+</Layout>
